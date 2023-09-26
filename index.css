@@ -1,0 +1,68 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #213559;
+  text-align: center;
+  color: #e8e9f3;
+}
+/* -----------------------
+!!!!!! Test Style !!!!!!
+-------------------------- */
+h1 {
+  font-size: 70px;
+  margin-top: 40px;
+}
+p {
+  font-size: 30px;
+}
+
+/* -----------------------
+!!!!!!!!! Main !!!!!!!!!!!
+-------------------------- */
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  /* border = temporery */
+  border: solid;
+}
+#money-el {
+  /* border = temporery */
+  border: solid orange;
+  margin-right: 50px;
+  align-self: center;
+}
+/* -----------------------
+!!!!!!!!! Aside !!!!!!!!!!!
+-------------------------- */
+aside {
+  border: solid;
+  margin-top: 30px;
+  background-color: #2d0320;
+}
+.price {
+  margin-right: 60px;
+}
+/* -----------------------
+!!!!!!     Flex    !!!!!!
+-------------------------- */
+.flex {
+  display: flex;
+  justify-content: center;
+}
+/* -----------------------
+!!!!!! Image Style !!!!!!
+-------------------------- */
+img {
+  width: 200px;
+  border-radius: 60px;
+}
+/* -----------------------
+!!!!!! Button Style !!!!!!
+-------------------------- */
+button {
+  padding: 10px 20px;
+}
