@@ -32,6 +32,7 @@ main {
 #money-el {
   /* border = temporery */
   border: solid orange;
+  background-color: gray;
   margin-right: 50px;
   align-self: center;
 }
@@ -43,6 +44,11 @@ aside {
   margin-top: 30px;
   background-color: #2d0320;
 }
+#uppgrade {
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
 .price {
   margin-right: 60px;
 }
@@ -52,6 +58,8 @@ aside {
 .flex {
   display: flex;
   justify-content: center;
+  border: solid greenyellow;
+  background-color: #550467;
 }
 /* -----------------------
 !!!!!! Image Style !!!!!!
