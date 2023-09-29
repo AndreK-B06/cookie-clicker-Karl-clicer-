@@ -1,24 +1,18 @@
-const karl = document.querySelector("#kal-sint");
+const tempI = document.querySelector("#temp");
 const moneyEl = document.querySelector("#money-el");
 let curserEL = document.querySelector("#curser-el");
+
+let karlImages = ["/image/Karl-ok.png", "/image/Karl-nei.png"];
 
 let money = 0;
 let clickStreng = 1;
 let krCurser = 5;
 const priceIncres = 2;
-
-karl.addEventListener("click", function () {
+tempI.addEventListener("click", function () {
   money = clickStreng + money;
   moneyEl.textContent = `${money} Kr.`;
 });
 
-function karlNei() {
-  document.querySelector("#karl-sint").src == Image / karlNei.png;
-}
-
-function KarlOk() {
-  document.querySelector("#karl-sint").src == Image / KarlOk.png;
-}
 /* -----------------------------------
 !!!!!!!!!!!!! Curser Upgrade !!!!!!!!!
 --------------------------------------*/
