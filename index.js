@@ -18,10 +18,12 @@ tempI.addEventListener("click", function () {
   money = clickStreng + money;
   moneyEl.textContent = `${money} Kr.`;
   let changeImg = myImage.getAttribute("src");
-  if (changeImg === "/image/Karl-ok.png") {
-    myImage.setAttribute("scr", "/image/Karl-nei.png");
+  if (changeImg === "./image/Karl-ok.png") {
+    myImage.setAttribute("scr", "./image/Karl-nei.png");
+    console.log("karl nei");
   } else {
-    myImage.setAttribute("src", "image/karl-ok.png");
+    myImage.setAttribute("src", "./image/karl-ok.png");
+    console.log("karl ok");
   }
 });
 
