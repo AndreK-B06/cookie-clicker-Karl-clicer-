@@ -58,6 +58,7 @@ aside {
   display: flex;
   justify-content: center;
   background-color: #550467;
+  padding: 20px 10px;
 }
 /* -----------------------
 !!!!!! Image Style !!!!!!
