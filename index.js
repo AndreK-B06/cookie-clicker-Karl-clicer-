@@ -23,7 +23,7 @@ tempI.addEventListener("click", function () {
     myImage.setAttribute("src", "./image/karl-ok.png");
     console.log("karl ok");
   } else {
-    console.log(Error);
+    console.log("Error");
   }
 });
 /* -----------------------------------
@@ -33,36 +33,30 @@ tempI.addEventListener("click", function () {
 /* -----------------------------------
 !!!!!!!!!!!!! Audio !!!!!!!!!
 --------------------------------------*/
-const clikAudio = {
-  folder: "audio/",
-  sounds: [
-    { file: "goofy.mp3", name: "goofy" },
-    { file: "grill.mp3", name: "grill" },
-    { file: "hold-kjeft.mp3", name: "hold-kjeft" },
-    { file: "teleporte.mp3", name: "teleporte" },
-  ],
-};
-const upgradeComtainer = document.querySelector("#audio-click");
+const audioGrillEl = document.querySelector("#grill-audio");
+const audioHoldKjeftEl = document.querySelector("#hold-kjeft-audio");
 
 /* -----------------------------------
 !!!!!!!!!!!!! Curser Upgrade !!!!!!!!!
 --------------------------------------*/
-let curserEL = document.querySelector("#curser-el");
+const curserEl = document.querySelector("#curser-el");
 let krCurser = 5;
 
 function upgradeCurser() {
   if (money === krCurser) {
     money -= krCurser;
     krCurser *= priceIncres;
-    curserEL.textContent = `${krCurser} Kr`;
+    curserEl.textContent = `${krCurser} Kr`;
     clickStreng += 1;
     moneyEl.innerHTML = `${money} Kr.`;
+    audioHoldKjeftEl.play();
   } else if (money >= krCurser) {
     money -= krCurser;
     krCurser *= priceIncres;
-    curserEL.textContent = `${krCurser} Kr`;
+    curserEl.textContent = `${krCurser} Kr`;
     clickStreng += 1;
     moneyEl.innerHTML = `${money} Kr.`;
+    audioHoldKjeftEl.play();
   }
 }
 /* -----------------------------------
@@ -77,11 +71,13 @@ function upgradeGrill() {
     grillEl.textContent = `${krGrill} Kr`;
     clickStreng += 20;
     moneyEl.innerHTML = `${money} Kr`;
+    audioGrillEl.play();
   } else if (money >= krGrill) {
     money -= krGrill;
     krGrill *= priceIncres;
     grillEl.textContent = `${krGrill} Kr`;
     clickStreng += 20;
     moneyEl.innerHTML = `${money} Kr`;
+    audioGrillEl.play();
   }
 }
