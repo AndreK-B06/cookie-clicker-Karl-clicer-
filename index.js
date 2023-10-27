@@ -1,6 +1,5 @@
 const imgKarl = document.querySelector("#img-karl");
 const moneyEl = document.querySelector("#money-el");
-let myImage = document.getElementById("img");
 
 let karlImages = ["/image/karl-ok.png", "/image/narl-nei.png"];
 
@@ -12,15 +11,13 @@ const priceIncres = 2;
 !!!!!!!!!!!!! On click !!!!!!!!!!!!!!!
 --------------------------------------*/
 let isFirstImage = true;
-/* --- !! --*/
-//  Jobbes forsat med å fikse på å bytte bilde
+let CickCount = 0;
 imgKarl.addEventListener("click", function () {
   money = clickStreng + money;
   moneyEl.textContent = `${money} Kr.`;
-  //
+
   if (isFirstImage) {
     imgKarl.src = "./image/karl-nei.png";
-    console.log("Karl nei");
     isFirstImage = true;
   } else {
     imgKarl.src = "./image/Karl-ok.png";
@@ -29,7 +26,7 @@ imgKarl.addEventListener("click", function () {
   isFirstImage = !isFirstImage;
 });
 /* -----------------------------------
-!!!!!!!!!!!!! Upgrade !!!!!!!!!
+!!!!!!!!!!!!! Upgrade section !!!!!!!!!
 --------------------------------------*/
 
 /* -----------------------------------
@@ -43,6 +40,7 @@ const audioHoldKjeftEl = document.querySelector("#hold-kjeft-audio");
 --------------------------------------*/
 const curserEl = document.querySelector("#curser-el");
 let krCurser = 5;
+let curserUpgradeCount = 0;
 
 function upgradeCurser() {
   if (money === krCurser) {
@@ -52,6 +50,7 @@ function upgradeCurser() {
     clickStreng += 1;
     moneyEl.innerHTML = `${money} Kr.`;
     audioHoldKjeftEl.play(0);
+    curserUpgradeCount++;
   } else if (money >= krCurser) {
     money -= krCurser;
     krCurser *= priceIncres;
@@ -59,6 +58,7 @@ function upgradeCurser() {
     clickStreng += 1;
     moneyEl.innerHTML = `${money} Kr.`;
     audioHoldKjeftEl.play(0);
+    curserUpgradeCount++;
   }
 }
 /* -----------------------------------
@@ -66,6 +66,8 @@ function upgradeCurser() {
 --------------------------------------*/
 let grillEl = document.querySelector("#grill");
 let krGrill = 100;
+let grillUpgradeCount = 0;
+//
 function upgradeGrill() {
   if (money == krGrill) {
     money -= krGrill;
@@ -74,6 +76,7 @@ function upgradeGrill() {
     clickStreng += 20;
     moneyEl.innerHTML = `${money} Kr`;
     audioGrillEl.play(0);
+    grillUpgradeCount++;
   } else if (money >= krGrill) {
     money -= krGrill;
     krGrill *= priceIncres;
@@ -81,5 +84,18 @@ function upgradeGrill() {
     clickStreng += 20;
     moneyEl.innerHTML = `${money} Kr`;
     audioGrillEl.play(0);
+    grillUpgradeCount++;
   }
 }
+
+/* -----------------------------------
+!!!!!!!!!!!!! Upgrade counter !!!!!!!!!
+--------------------------------------*/
+
+let curserCounterEL = document.querySelector("#curser-conter");
+
+function contUppgrades() {
+  curserCounterEL.textContent = `${grillUpgradeCount}`;
+  console.log("Funksjonen kjører");
+}
+contUppgrades();
