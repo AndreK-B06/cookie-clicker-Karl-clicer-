@@ -1,8 +1,8 @@
 const imgKarl = document.querySelector("#img-karl");
 const moneyEl = document.querySelector("#money-el");
-let myImage = document.querySelector("img");
+let myImage = document.getElementById("img");
 
-// let karlImages = ["/image/karl-ok.png", "/image/narl-nei.png"];
+let karlImages = ["/image/karl-ok.png", "/image/narl-nei.png"];
 
 let money = 0;
 let clickStreng = 1;
@@ -11,27 +11,22 @@ const priceIncres = 2;
 /* -----------------------------------
 !!!!!!!!!!!!! On click !!!!!!!!!!!!!!!
 --------------------------------------*/
-const imageChange = document.querySelector(".img-change");
-let clickKarlChange = 1;
-imageChange.addEventListener("click", function () {
-  if (clickKarlChange == 1) {
-  }
-});
+let isFirstImage = true;
+/* --- !! --*/
 //  Jobbes forsat med å fikse på å bytte bilde
 imgKarl.addEventListener("click", function () {
   money = clickStreng + money;
   moneyEl.textContent = `${money} Kr.`;
-
-  // let changeImg = myImage.getAttribute("src");
-  // if (changeImg === "./image/karl-ok.png") {
-  //   myImage.setAttribute("scr", "./image/karl-nei.png");
-  //   console.log("karl nei");
-  // } else if (changeImg === "./image/karl-nei.png") {
-  //   myImage.setAttribute("src", "./image/karl-ok.png");
-  //   console.log("karl ok");
-  // } else {
-  //   console.log("Error");
-  // }
+  //
+  if (isFirstImage) {
+    imgKarl.src = "./image/karl-nei.png";
+    console.log("Karl nei");
+    isFirstImage = true;
+  } else {
+    imgKarl.src = "./image/Karl-ok.png";
+    isFirstImage = false;
+  }
+  isFirstImage = !isFirstImage;
 });
 /* -----------------------------------
 !!!!!!!!!!!!! Upgrade !!!!!!!!!
