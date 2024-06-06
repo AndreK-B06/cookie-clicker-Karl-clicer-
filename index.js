@@ -7,9 +7,6 @@ let money = 0;
 let clickStreng = 1;
 const priceIncres = 2;
 
-/* -----------------------------------
-!!!!!!!!!!!!! On click !!!!!!!!!!!!!!!
---------------------------------------*/
 let isFirstImage = true;
 let CickCount = 0;
 imgKarl.addEventListener("click", function () {
@@ -25,19 +22,11 @@ imgKarl.addEventListener("click", function () {
   }
   isFirstImage = !isFirstImage;
 });
-/* -----------------------------------
-!!!!!!!!!!!!! Upgrade section !!!!!!!!!
---------------------------------------*/
 
-/* -----------------------------------
-!!!!!!!!!!!!! Audio !!!!!!!!!
---------------------------------------*/
 const audioGrillEl = document.querySelector("#grill-audio");
 const audioHoldKjeftEl = document.querySelector("#hold-kjeft-audio");
 
-/* -----------------------------------
-!!!!!!!!!!!!! Curser Upgrade !!!!!!!!!
---------------------------------------*/
+
 const curserEl = document.querySelector("#curser-el");
 let krCurser = 5;
 let curserUpgradeCount = 0;
@@ -61,9 +50,7 @@ function upgradeCurser() {
     curserUpgradeCount++;
   }
 }
-/* -----------------------------------
-!!!!!!!!!!!!! Grill Upgrade !!!!!!!!!
---------------------------------------*/
+
 let grillEl = document.querySelector("#grill");
 let krGrill = 100;
 let grillUpgradeCount = 0;
@@ -87,10 +74,6 @@ function upgradeGrill() {
     grillUpgradeCount++;
   }
 }
-
-/* -----------------------------------
-!!!!!!!!!!!!! Upgrade counter !!!!!!!!!
---------------------------------------*/
 
 let curserCounterEL = document.querySelector("#curser-conter");
 
