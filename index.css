@@ -3,17 +3,15 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+/* MAIN TAGS */
 body {
-  display: flex;
-  flex-direction: column;
   background-color: #df9b6d;
   text-align: center;
   color: #03254e;
   align-items: center;
 }
-/* -----------------------
-!!!!!! Test Style !!!!!!
--------------------------- */
+
 h1 {
   font-size: 70px;
   margin-top: 40px;
@@ -22,26 +20,37 @@ p {
   font-size: 30px;
 }
 
-/* -----------------------
-!!!!!!!!! Main !!!!!!!!!!!
--------------------------- */
 main {
-  display: flex;
   justify-content: center;
   margin-top: 80px;
 }
-#money-el {
-  background-color: #a4c1df;
-  margin-right: 50px;
-  align-self: center;
+img {
+  width: 200px;
+  height: 300px;
+  border-radius: 60px;
 }
-/* -----------------------
-!!!!!!!!! Aside !!!!!!!!!!!
--------------------------- */
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
 aside {
   margin-top: 30px;
   background-color: #a4c1df;
   padding: 40px 150px;
+  border-radius: 20px;
+}
+/* MAIN TAGS */
+
+/*ID'S*/
+#txt-style-money {
+  background-color: #a4c1df;
+  margin-right: 50px;
+  align-self: center;
+  padding: 10px 20px;
   border-radius: 20px;
 }
 #uppgrade {
@@ -49,38 +58,28 @@ aside {
   padding-top: 20px;
   padding-bottom: 30px;
 }
+/*ID'S*/
+
+/*CLASS*/
 .price {
   margin-right: 60px;
 }
-#money-el {
-  padding: 10px 20px;
-  border-radius: 20px;
-}
-/* -----------------------
-!!!!!!     Flex    !!!!!!
--------------------------- */
-.flex {
-  display: flex;
+.sect-cont {
   justify-content: center;
   background-color: #df9b6d;
   padding: 20px 10px;
   margin-top: 20px;
   border-radius: 20px;
 }
-/* -----------------------
-!!!!!! Image !!!!!!
--------------------------- */
-img {
-  width: 200px;
-  height: 300px;
-  border-radius: 60px;
+/*CLASS*/
+
+/* UTILITY */
+.row {
+  display: flex;
+  flex-direction: row;
 }
-/* -----------------------
-!!!!!! Button Style !!!!!!
--------------------------- */
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
+.column {
+  display: flex;
+  flex-direction: column;
 }
+/* UTILITY */

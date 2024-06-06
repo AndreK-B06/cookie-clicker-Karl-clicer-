@@ -1,5 +1,5 @@
 const imgKarl = document.querySelector("#img-karl");
-const moneyEl = document.querySelector("#money-el");
+const moneyEl = document.querySelector("#txt-style-money");
 
 let karlImages = ["/image/karl-ok.png", "/image/narl-nei.png"];
 
@@ -25,7 +25,6 @@ imgKarl.addEventListener("click", function () {
 
 const audioGrillEl = document.querySelector("#grill-audio");
 const audioHoldKjeftEl = document.querySelector("#hold-kjeft-audio");
-
 
 const curserEl = document.querySelector("#curser-el");
 let krCurser = 5;

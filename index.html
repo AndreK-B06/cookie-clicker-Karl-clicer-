@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,50 +7,32 @@
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
   </head>
-  <body>
+
+  <body class="column">
     <h1>Karl Clicker</h1>
-    <button id="reset">Reset</button>
     </head>
-    <main>
-     <!-- ---------
-      !!! IMG !!!
-      ------------>
-      <p id="money-el">0 Kr.</p>
+
+    <main class="row">
+      <p id="txt-style-money">0 Kr.</p>
     <img id="img-karl" class="img-change" src="./image/Karl-ok.png" alt="Karl blir sint" />
-    <div></div>
     </main>
-    <!-- --------------
-      !!! Uppgrades !!!
-     ----------------->
-    <aside>
-      <!-- Count uppgrades -->
-      <div>
-        <p id="curser-conter" class="upgrade-Counter">0</p>
-        <p id="grill-conter" class="upgrade-Counter"></p>
-      </div>
+
+    <aside class="colum">
       <h2 id="uppgrade">Uppgrades</h2>
-      <!-- Curser Uppgrade -->
-      <div class="flex">
+
+      <section class="row sect-cont">
       <p class="price" id="curser-el">5 kr</p>
       <button class="audio-click" id="curser" onclick="upgradeCurser()">👆 Curser</button>
       <audio id="hold-kjeft-audio" src="./audio/holde-kjeft.mp3"></audio>
-    </div>
-    <!-- Grill Uppgrade -->
-     <div class="flex">
+    </section>
+
+     <section class="row sect-cont">
       <p class="price" id="grill">100 kr</p>
       <button class="audio-click" onclick="upgradeGrill()">Bye grill factroy</button>
       <audio id="grill-audio" src="./audio/grill.mp3"></audio>
-     </div>
-     <!-- Comming -->
-     <!-- Uppgrade -->
-     <div></div>
-     <!-- Uppgrade -->
-     <div></div>
-     <!-- Uppgrade -->
-     <div></div>
-     <!-- Uppgrade -->
-     <div></div>
+     </section>
     </aside>
+
     <script src="js/Imagechanger.js"></script>
   </body>
 </html>
