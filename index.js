@@ -1,7 +1,6 @@
 const imgKarl = document.querySelector("#img-karl");
 let karlImages = ["/image/karl-ok.png", "/image/karl-nei.png"];
 const txtMoney = document.querySelector("#txt-style-money");
-let curserCounterEL = document.querySelector("#curser-conter");
 
 const audioGrill = document.querySelector("#grill-audio");
 const audioHoldKjeft = document.querySelector("#hold-kjeft-audio");
@@ -56,9 +55,3 @@ function upgradeGrill() {
     grillUpgradeCount++;
   }
 }
-
-function contUpgrades() {
-  curserCounterEL.textContent = `${grillUpgradeCount}`;
-  console.log("Funksjonen kjører");
-}
-contUpgrades();
