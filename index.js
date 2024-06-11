@@ -1,17 +1,27 @@
 const imgKarl = document.querySelector("#img-karl");
-const moneyEl = document.querySelector("#txt-style-money");
+let karlImages = ["/image/karl-ok.png", "/image/karl-nei.png"];
+const txtMoney = document.querySelector("#txt-style-money");
+let curserCounterEL = document.querySelector("#curser-conter");
 
-let karlImages = ["/image/karl-ok.png", "/image/narl-nei.png"];
+const audioGrill = document.querySelector("#grill-audio");
+const audioHoldKjeft = document.querySelector("#hold-kjeft-audio");
 
+const curser = document.querySelector("#curser");
+let grill = document.querySelector("#grill");
+
+const priceIncrease = 2;
 let money = 0;
-let clickStreng = 1;
-const priceIncres = 2;
+let krCurser = 5;
+let krGrill = 100;
+let clickStrength = 1;
+let curserUpgradeCount = 0;
+let grillUpgradeCount = 0;
 
 let isFirstImage = true;
-let CickCount = 0;
+
 imgKarl.addEventListener("click", function () {
-  money = clickStreng + money;
-  moneyEl.textContent = `${money} Kr.`;
+  money = clickStrength + money;
+  txtMoney.textContent = `${money} Kr.`;
 
   if (isFirstImage) {
     imgKarl.src = "./image/karl-nei.png";
@@ -23,61 +33,32 @@ imgKarl.addEventListener("click", function () {
   isFirstImage = !isFirstImage;
 });
 
-const audioGrillEl = document.querySelector("#grill-audio");
-const audioHoldKjeftEl = document.querySelector("#hold-kjeft-audio");
-
-const curserEl = document.querySelector("#curser-el");
-let krCurser = 5;
-let curserUpgradeCount = 0;
-
 function upgradeCurser() {
-  if (money === krCurser) {
+  if (money >= krCurser) {
     money -= krCurser;
-    krCurser *= priceIncres;
-    curserEl.textContent = `${krCurser} Kr`;
-    clickStreng += 1;
-    moneyEl.innerHTML = `${money} Kr.`;
-    audioHoldKjeftEl.play(0);
-    curserUpgradeCount++;
-  } else if (money >= krCurser) {
-    money -= krCurser;
-    krCurser *= priceIncres;
-    curserEl.textContent = `${krCurser} Kr`;
-    clickStreng += 1;
-    moneyEl.innerHTML = `${money} Kr.`;
-    audioHoldKjeftEl.play(0);
+    krCurser *= priceIncrease;
+    curser.textContent = `${krCurser} Kr`;
+    clickStrength += 1;
+    txtMoney.innerHTML = `${money} Kr.`;
+    audioHoldKjeft.play(0);
     curserUpgradeCount++;
   }
 }
 
-let grillEl = document.querySelector("#grill");
-let krGrill = 100;
-let grillUpgradeCount = 0;
-//
 function upgradeGrill() {
-  if (money == krGrill) {
+  if (money >= krGrill) {
     money -= krGrill;
-    krGrill *= priceIncres;
-    grillEl.textContent = `${krGrill} Kr`;
-    clickStreng += 20;
-    moneyEl.innerHTML = `${money} Kr`;
-    audioGrillEl.play(0);
-    grillUpgradeCount++;
-  } else if (money >= krGrill) {
-    money -= krGrill;
-    krGrill *= priceIncres;
-    grillEl.textContent = `${krGrill} Kr`;
-    clickStreng += 20;
-    moneyEl.innerHTML = `${money} Kr`;
-    audioGrillEl.play(0);
+    krGrill *= priceIncrease;
+    grill.textContent = `${krGrill} Kr`;
+    clickStrength += 20;
+    txtMoney.innerHTML = `${money} Kr`;
+    audioGrill.play(0);
     grillUpgradeCount++;
   }
 }
 
-let curserCounterEL = document.querySelector("#curser-conter");
-
-function contUppgrades() {
+function contUpgrades() {
   curserCounterEL.textContent = `${grillUpgradeCount}`;
   console.log("Funksjonen kjører");
 }
-contUppgrades();
+contUpgrades();
