@@ -5,9 +5,9 @@
 }
 
 :root {
-  --main-background: #df9b6d;
-  --text: #03254e;
-  --cont-background: #a4c1df;
+  --main-background: #161a1d;
+  --text: #f5f3f4;
+  --cont-background: #b1a7a6;
 }
 /* MAIN TAGS */
 body {
@@ -25,6 +25,10 @@ h1 {
   margin: 40px 0px 40px 0px;
   flex: 100%;
 }
+h2,
+#txt-style-money {
+  color: var(--main-background);
+}
 p {
   font-size: 30px;
 }
@@ -39,6 +43,7 @@ img {
   width: 200px;
   height: 300px;
   border-radius: 60px;
+  border: solid var(--cont-background) 3px;
 }
 
 button {
