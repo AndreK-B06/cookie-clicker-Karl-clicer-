@@ -4,11 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-background: #df9b6d;
+  --text: #03254e;
+  --cont-background: #a4c1df;
+}
 /* MAIN TAGS */
 body {
-  background-color: #df9b6d;
+  background-color: var(--cont-background);
   text-align: center;
-  color: #03254e;
+  color: var(--text);
   align-items: center;
 }
 
@@ -39,7 +44,7 @@ button {
 
 aside {
   margin-top: 30px;
-  background-color: #a4c1df;
+  background-color: var(--cont-background);
   padding: 40px 150px;
   border-radius: 20px;
 }
@@ -47,7 +52,7 @@ aside {
 
 /*ID'S*/
 #txt-style-money {
-  background-color: #a4c1df;
+  background-color: var(--cont-background);
   margin-right: 50px;
   align-self: center;
   padding: 10px 20px;
@@ -66,7 +71,7 @@ aside {
 }
 .sect-cont {
   justify-content: center;
-  background-color: #df9b6d;
+  background-color: var(--main-background);
   padding: 20px 10px;
   margin-top: 20px;
   border-radius: 20px;
