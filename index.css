@@ -11,15 +11,19 @@
 }
 /* MAIN TAGS */
 body {
-  background-color: var(--cont-background);
-  text-align: center;
+  display: flex;
+  background-color: var(--main-background);
   color: var(--text);
+  text-align: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 h1 {
   font-size: 70px;
-  margin-top: 40px;
+  margin: 40px 0px 40px 0px;
+  flex: 100%;
 }
 p {
   font-size: 30px;
@@ -27,7 +31,9 @@ p {
 
 main {
   justify-content: center;
-  margin-top: 80px;
+  flex: 50%;
+  margin-bottom: 30px;
+  max-width: 30rem;
 }
 img {
   width: 200px;
@@ -43,10 +49,12 @@ button {
 }
 
 aside {
-  margin-top: 30px;
   background-color: var(--cont-background);
+  margin-inline: 10px;
   padding: 40px 150px;
   border-radius: 20px;
+  flex: 50%;
+  max-width: 40rem;
 }
 /* MAIN TAGS */
 
@@ -70,8 +78,8 @@ aside {
   margin-right: 60px;
 }
 .sect-cont {
-  justify-content: center;
   background-color: var(--main-background);
+  justify-content: center;
   padding: 20px 10px;
   margin-top: 20px;
   border-radius: 20px;
